@@ -28,8 +28,8 @@ innerXHTML = function($source) {
 				var $text_content = $children[$i].nodeValue;
 				$text_content = $text_content.replace(/</g,'&lt;');
 				$text_content = $text_content.replace(/>/g,'&gt;');
-				if !(/^\s+$).test($text_content)
-				$text_content = $text_content.replace(/\s+$/,''); // trailing space not significant unless it is the only text in the node
+				if (!(/^\s+$/).test($text_content))
+				$text_content = $text_content.replace(/\s+$/,''); // trailing space not significant unless it is the only text content of the node
 				$xhtml += $text_content;
 			}
 			else if ($children[$i].nodeType == 8) {
